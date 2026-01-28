@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmfreOS - Stable, Optimized, Simple</title>
+    <meta name="description" content="AmfreOS is a stable and performance-oriented Linux distribution with minimalist design. Made in Kenya for everyone.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Assets/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#features">Features</a>
+        <a href="releases.html">Releases</a>
+        <a href="docs.html">Docs</a>
+       
+    </nav>
+
+    <header>
+        <img src="Assets/logo.png" width="400" alt="AmfreOS Logo" class="logo-img">
+        <h1>AmfreOS</h1>
+        <p class="subtitle">Peace, Simplicity and Power Combined.</p>
+        
+        <div class="kenyan-badge">
+          
+            <span>Made in Kenya • Proudly Open Source</span>
+        </div>
+        
+        <div class="hero-cta">
+            <a href="#download" class="btn btn-primary">Download Now</a>
+            <a href="docs.html" class="btn btn-secondary">Read Documentation</a>
+        </div>
+
+        <div class="desktop-views">
+            <div class="view-box" onclick="openLightbox('Assets/ss1.png')">
+                <img src="Assets/ss1.png" alt="AmfreOS Desktop 1">
+                <div class="view-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="view-box" onclick="openLightbox('Assets/ss2.png')">
+                <img src="Assets/ss2.png" alt="AmfreOS Desktop 2">
+                <div class="view-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Enlarged View">
+    </div>
+
+    <section id="features">
+        <div class="features">
+            <div class="feature-card">
+                <i class="fas fa-leaf"></i>
+                <h3>Optimized</h3>
+                <p>AmfreOS provides a high-performance, balanced, and stable system with an optimized kernel and system settings. It utilizes the fully secure Debian base.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-palette"></i>
+                <h3>Stable, Fast, Beautiful</h3>
+                <p>AmfreOS offers a stylish and useful interface with its customized GNOME desktop. Its minimalist and modern design is easy on the eyes and optimized for productivity.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-rocket"></i>
+                <h3>Everything is easy!</h3>
+                <p>AmfreOS eliminates complex Linux usage. No need to get lost on the internet or deal with complex repo addition processes. You can download your applications and set up the system in a very short time with special commands.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="download">
+        <div class="download-section">
+            <h2>Download AmfreOS Linux</h2>
+            <p>Choose the best version for your system and take your first step into serenity.</p>
+            
+            <div class="download-container">
+                <div class="download-card desktop">
+                    <i class="fas fa-desktop"></i>
+                    <h3>AmfreOS Desktop</h3>
+                    <p>Perfectly balanced for daily use, development, and creative work.</p>
+                    
+                    <div class="edition-features">
+                        <span class="feature-tag">GNOME Desktop</span>
+                        <span class="feature-tag">Office Suite</span>
+                        <span class="feature-tag">Development Tools</span>
+                        <span class="feature-tag">Media Apps</span>
+                        <span class="feature-tag">Productivity Tools</span>
+                    </div>
+                    
+                    <a href="#" class="btn btn-primary">Download ISO (64-bit)</a>
+                    <p class="file-info">Version 1.0 | ~2.5 GB | SHA256: a1b2c3...</p>
+                </div>
+                
+                <div class="download-card server">
+                    <i class="fas fa-server"></i>
+                    <h3>AmfreOS Server</h3>
+                    <p>Optimized for servers, cloud, and headless operations. Lightweight and secure.</p>
+                    
+                    <div class="edition-features">
+                        <span class="feature-tag">Headless Setup</span>
+                        <span class="feature-tag">Docker Ready</span>
+                        <span class="feature-tag">Web Stack</span>
+                        <span class="feature-tag">Database</span>
+                        <span class="feature-tag">Security Tools</span>
+                    </div>
+                    
+                    <a href="#" class="btn btn-primary">Download Server Edition</a>
+                    <p class="file-info">Version 1.0 | ~1.2 GB | SHA256: d4e5f6...</p>
+                </div>
+            </div>
+            
+            <div class="system-requirements">
+                <h3>System Requirements</h3>
+                <div class="requirements-grid">
+                    <div class="requirement-item">
+                        <h4><i class="fas fa-desktop"></i> Desktop Edition</h4>
+                        <ul>
+                            <li>64-bit processor</li>
+                            <li>4GB RAM minimum (8GB recommended)</li>
+                            <li>25GB storage minimum</li>
+                            <li>1024x768 display resolution</li>
+                            <li>Internet connection for updates</li>
+                        </ul>
+                    </div>
+                    <div class="requirement-item">
+                        <h4><i class="fas fa-server"></i> Server Edition</h4>
+                        <ul>
+                            <li>64-bit processor</li>
+                            <li>2GB RAM minimum (4GB recommended)</li>
+                            <li>20GB storage minimum</li>
+                            <li>Ethernet connection</li>
+                            <li>SSH access for remote management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AmfreOS Project. All rights reserved.</p>
+        <p>Created by a curious IT guy from Western Kenya</p>
+        
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Use</a> | 
+            <a href="https://github.com/amfreos">GitHub</a> | 
+            <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="footer-kenyan">
+            <div class="kenyan-flag">
+                <div class="flag-stripe stripe-black"></div>
+                <div class="flag-stripe stripe-red"></div>
+                <div class="flag-stripe stripe-green"></div>
+            </div>
+            <span>Proudly made in Kenya • Open Source for everyone</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple lightbox functionality
+        function openLightbox(imageSrc) {
+            document.getElementById('lightbox-img').src = imageSrc;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+        
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+        
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+
+</html>

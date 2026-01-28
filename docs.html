@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - AmfreOS Linux</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Assets/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="releases.html">Releases</a>
+        <a href="docs.html">Docs</a>
+        <a href="index.html#download" class="btn-download">Download</a>
+    </nav>
+
+    <div class="container docs-layout">
+        <aside class="docs-sidebar">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="#about">What is AmfreOS?</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#commands">AmfreOS Commands</a></li>
+                <li><a href="#kenyan">Kenyan Focus</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+        </aside>
+
+        <main class="docs-content">
+            <section id="about">
+                <h2>What is AmfreOS?</h2>
+                <p>AmfreOS is a Debian-based desktop Linux distribution optimized for stability and daily use. AmfreOS offers simplified package and system management commands to make Linux usage easier; it avoids unnecessary complexity while providing control to the user.</p>
+                <p>Created by a curious IT enthusiast from Western Kenya, AmfreOS is designed with consideration for users in Kenya and across Africa, focusing on reliability, ease of use, and efficient performance even on modest hardware.</p>
+            </section>
+
+            <section id="installation">
+                <h2>Installation</h2>
+                <p>1. Download the ISO file from the website. Copy it to your USB drive using Ventoy or Rufus.</p>
+                <p>2. Enter your motherboard's BIOS and boot your system from the USB drive.</p>
+                <p><strong>Note:</strong> AmfreOS supports most modern hardware. If your GPU is Nvidia, ensure it is compatible with nouveau.</p>
+                <p>AmfreOS may not boot on very old hardware. A minimum of 4GB RAM is recommended. Additionally, problems may arise on very new hardware with low Linux compatibility.</p>
+                <p>Once you reach the Boot Screen, you can start in Live mode to try AmfreOS, or start the Debian Installer to install it to your hard drive. Complete the necessary steps via the GUI, install your system, and start exploring!</p>
+                <p><strong>Note for Live Mode:</strong> When you press shut down in Live mode, you may see the Plymouth screen. Simply press the <strong>Enter</strong> key; this will safely remove the live-medium and resolve the shutdown issue.</p>
+            </section>
+
+            <section id="commands">
+                <h2>AmfreOS Commands</h2>
+                <p>No more getting lost searching for repos on the internet or risking your system with old or fake repos. AmfreOS saves you from wasting hours with its special commands. You can download the software you want using up-to-date and official repos. At the same time, system management scripts will save you from getting lost in the terminal for hours!</p>
+
+                <h3>System Management</h3>
+                <p>To update the system quickly, easily, and safely:</p>
+                <pre><code>sudo amfre-update</code></pre>
+
+                <p>To easily change your DNS:</p>
+                <pre><code>sudo amfre-change-dns</code></pre>
+
+                <h3>App Installation Shortcuts</h3>
+                <p>Install Flatpak quickly:</p>
+                <pre><code>amfre-install-flatpak</code></pre>
+
+                <p>Download Steam easily:</p>
+                <pre><code>amfre-install-steam</code></pre>
+
+                <p>Download Brave Browser easily:</p>
+                <pre><code>amfre-install-brave</code></pre>
+
+                <p>Download VSCode easily:</p>
+                <pre><code>amfre-install-vscode</code></pre>
+
+                <p>Download AI IDEs (Cursor, Windsurf, AntiGravity available!):</p>
+                <pre><code>amfre-install-vibecoding</code></pre>
+
+                <p>Download Office suites easily:</p>
+                <pre><code>amfre-install-officesuite</code></pre>
+
+                <p>Download Video Editing and Design programs:</p>
+                <pre><code>amfre-install-editor</code></pre>
+
+                <p>Download Music Production and Audio software:</p>
+                <pre><code>amfre-install-producer</code></pre>
+
+                <h3>Performance & Utility</h3>
+                <p>Install the fast Liquorix Kernel:</p>
+                <pre><code>amfre-install-liquorix</code></pre>
+                <p><small>*Check compatibility with your Nvidia card.</small></p>
+
+                <p>Use Zram to increase performance if you have low RAM:</p>
+                <pre><code>amfre-zram-settings</code></pre>
+
+                <p>Run Local AI models:</p>
+                <pre><code>amfre-install-ollama</code></pre>
+
+                <p>Get detailed network information:</p>
+                <pre><code>amfre-net-info</code></pre>
+
+                <p>Get system information:</p>
+                <pre><code>amfre-fetch</code></pre>
+            </section>
+
+            <section id="kenyan">
+                <h2>Kenyan Focus</h2>
+                <p>AmfreOS is developed in Kenya with consideration for local computing needs:</p>
+                <ul>
+                    <li><strong>Network Optimization:</strong> Optimized for East African network conditions</li>
+                    <li><strong>Localized Support:</strong> Documentation and support considering local context</li>
+                    <li><strong>Hardware Considerations:</strong> Tested and optimized for hardware commonly available in Kenya</li>
+                    <li><strong>Open Source Advocacy:</strong> Promoting open source software adoption in Kenya</li>
+                    <li><strong>Community Driven:</strong> Developed with input from Kenyan users and IT professionals</li>
+                </ul>
+                <p>AmfreOS aims to provide a stable, reliable Linux distribution that works well in Kenyan computing environments while being accessible to users worldwide.</p>
+            </section>
+
+            <section id="roadmap">
+                <h2>Roadmap</h2>
+                <ul>
+                    <li>Further simplify usage with more automation commands.</li>
+                    <li>Expand hardware compatibility for older systems</li>
+                    <li>Add more localized optimizations for African networks</li>
+                    <li>Improve documentation with Swahili translations</li>
+                    <li>Build a stronger community around AmfreOS in Kenya</li>
+                </ul>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Email the developer: <a href="mailto:developer@amfreos.org">developer@amfreos.org</a></p>
+                <p>Follow on X for updates: <a href="https://x.com/amfreos" target="_blank">@amfreos</a></p>
+                <p>GitHub Organization: <a href="https://github.com/amfreos" target="_blank">github.com/amfreos</a></p>
+                <p>Community Forum: <a href="https://forum.amfreos.org" target="_blank">forum.amfreos.org</a></p>
+            </section>
+
+            <section id="links">
+                <h2>Links</h2>
+                <p>Official Site: <a href="https://amfreos.org" target="_blank">amfreos.org</a></p>
+                <p>Official GitHub Organization: <a href="https://github.com/amfreos" target="_blank">github.com/amfreos</a></p>
+                <p>SourceForge Project Page: <a href="https://sourceforge.net/projects/amfreos/" target="_blank">sourceforge.net/projects/amfreos</a></p>
+                <p>Documentation Wiki: <a href="https://wiki.amfreos.org" target="_blank">wiki.amfreos.org</a></p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 AmfreOS Project. All rights reserved.</p>
+        <p>Created by a curious IT guy from Western Kenya</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a> | 
+            <a href="releases.html">Releases</a> | 
+            <a href="docs.html">Docs</a> | 
+            <a href="index.html#download">Download</a>
+        </div>
+        <div class="footer-kenyan">
+            <div class="kenyan-flag">
+                <div class="flag-stripe stripe-black"></div>
+                <div class="flag-stripe stripe-red"></div>
+                <div class="flag-stripe stripe-green"></div>
+            </div>
+            <span>Made with ❤️ in Kenya</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,188 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AmfreOS - Stable, Optimized, Simple</title>
-    <meta name="description" content="AmfreOS is a stable and performance-oriented Linux distribution with minimalist design. Made in Kenya for everyone.">
+    <title>AmfreOS – Linux That Just Works</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="Assets/logo.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="Assets/logo.png" type="image/png">
 </head>
-
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#features">Features</a>
-        <a href="releases.html">Releases</a>
-        <a href="docs.html">Docs</a>
-       
-    </nav>
 
-    <header>
-        <img src="Assets/logo.png" width="400" alt="AmfreOS Logo" class="logo-img">
-        <h1>AmfreOS</h1>
-        <p class="subtitle">Peace, Simplicity and Power Combined.</p>
-        
-        <div class="kenyan-badge">
-          
-            <span>Made in Kenya • Proudly Open Source</span>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <img src="Assets/logo.png" alt="AmfreOS Logo">
+            <span>AmfreOS</span>
         </div>
-        
-        <div class="hero-cta">
-            <a href="#download" class="btn btn-primary">Download Now</a>
-            <a href="docs.html" class="btn btn-secondary">Read Documentation</a>
-        </div>
-
-        <div class="desktop-views">
-            <div class="view-box" onclick="openLightbox('Assets/ss1.png')">
-                <img src="Assets/ss1.png" alt="AmfreOS Desktop 1">
-                <div class="view-overlay"><i class="fas fa-search-plus"></i></div>
-            </div>
-            <div class="view-box" onclick="openLightbox('Assets/ss2.png')">
-                <img src="Assets/ss2.png" alt="AmfreOS Desktop 2">
-                <div class="view-overlay"><i class="fas fa-search-plus"></i></div>
-            </div>
-        </div>
-    </header>
-
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <img id="lightbox-img" src="" alt="Enlarged View">
+        <button class="menu-toggle" onclick="toggleMobileMenu()">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#home" class="nav-link">Homepage</a></li>
+            <li class="nav-item"><a href="#download" class="nav-link">Download</a></li>
+            <li class="nav-item"><a href="#docs" class="nav-link">Docs</a></li>
+        </ul>
     </div>
+</nav>
 
-    <section id="features">
-        <div class="features">
-            <div class="feature-card">
-                <i class="fas fa-leaf"></i>
-                <h3>Optimized</h3>
-                <p>AmfreOS provides a high-performance, balanced, and stable system with an optimized kernel and system settings. It utilizes the fully secure Debian base.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-palette"></i>
-                <h3>Stable, Fast, Beautiful</h3>
-                <p>AmfreOS offers a stylish and useful interface with its customized GNOME desktop. Its minimalist and modern design is easy on the eyes and optimized for productivity.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-rocket"></i>
-                <h3>Everything is easy!</h3>
-                <p>AmfreOS eliminates complex Linux usage. No need to get lost on the internet or deal with complex repo addition processes. You can download your applications and set up the system in a very short time with special commands.</p>
-            </div>
+<!-- Hero -->
+<section id="home" class="hero">
+    <div class="container">
+        <h1 class="hero-title">AmfreOS</h1>
+        <p class="hero-subtitle">Linux that just works</p>
+        <p class="hero-description">
+            AmfreOS is a Debian (stable)–based Linux distribution designed as a
+            reliable daily driver. It focuses on simplicity, stability, and privacy,
+            while remaining easy to use for everyday work, learning, and development.
+        </p>
+        <div class="hero-buttons">
+            <button class="download-btn" onclick="scrollToSection('download')">Download Now</button>
+            <button class="gallery-btn" onclick="scrollToSection('gallery')">View Gallery</button>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="download">
-        <div class="download-section">
-            <h2>Download AmfreOS Linux</h2>
-            <p>Choose the best version for your system and take your first step into serenity.</p>
-            
-            <div class="download-container">
-                <div class="download-card desktop">
-                    <i class="fas fa-desktop"></i>
-                    <h3>AmfreOS Desktop</h3>
-                    <p>Perfectly balanced for daily use, development, and creative work.</p>
-                    
-                    <div class="edition-features">
-                        <span class="feature-tag">GNOME Desktop</span>
-                        <span class="feature-tag">Office Suite</span>
-                        <span class="feature-tag">Development Tools</span>
-                        <span class="feature-tag">Media Apps</span>
-                        <span class="feature-tag">Productivity Tools</span>
+<!-- About -->
+<section id="about" class="about">
+    <div class="container">
+        <h2>About AmfreOS</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    AmfreOS is a Debian-based GNU/Linux distribution built for people
+                    who want an operating system that works out of the box.
+                    It is suitable for daily use, including browsing, development,
+                    office work, learning, and general computing.
+                </p>
+                <p>
+                    In addition to being a normal desktop OS, AmfreOS includes
+                    optional anti-forensic and privacy tools. These tools help reduce
+                    leftover system traces such as logs, swap data, and temporary files,
+                    without interfering with normal usage.
+                </p>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Daily Driver</h3>
+                        <p>Stable Debian base with sane defaults</p>
                     </div>
-                    
-                    <a href="#" class="btn btn-primary">Download ISO (64-bit)</a>
-                    <p class="file-info">Version 1.0 | ~2.5 GB | SHA256: a1b2c3...</p>
-                </div>
-                
-                <div class="download-card server">
-                    <i class="fas fa-server"></i>
-                    <h3>AmfreOS Server</h3>
-                    <p>Optimized for servers, cloud, and headless operations. Lightweight and secure.</p>
-                    
-                    <div class="edition-features">
-                        <span class="feature-tag">Headless Setup</span>
-                        <span class="feature-tag">Docker Ready</span>
-                        <span class="feature-tag">Web Stack</span>
-                        <span class="feature-tag">Database</span>
-                        <span class="feature-tag">Security Tools</span>
+                    <div class="feature">
+                        <h3>Privacy</h3>
+                        <p>Optional anti-forensic & privacy tools</p>
                     </div>
-                    
-                    <a href="#" class="btn btn-primary">Download Server Edition</a>
-                    <p class="file-info">Version 1.0 | ~1.2 GB | SHA256: d4e5f6...</p>
-                </div>
-            </div>
-            
-            <div class="system-requirements">
-                <h3>System Requirements</h3>
-                <div class="requirements-grid">
-                    <div class="requirement-item">
-                        <h4><i class="fas fa-desktop"></i> Desktop Edition</h4>
-                        <ul>
-                            <li>64-bit processor</li>
-                            <li>4GB RAM minimum (8GB recommended)</li>
-                            <li>25GB storage minimum</li>
-                            <li>1024x768 display resolution</li>
-                            <li>Internet connection for updates</li>
-                        </ul>
-                    </div>
-                    <div class="requirement-item">
-                        <h4><i class="fas fa-server"></i> Server Edition</h4>
-                        <ul>
-                            <li>64-bit processor</li>
-                            <li>2GB RAM minimum (4GB recommended)</li>
-                            <li>20GB storage minimum</li>
-                            <li>Ethernet connection</li>
-                            <li>SSH access for remote management</li>
-                        </ul>
+                    <div class="feature">
+                        <h3>Simple</h3>
+                        <p>Beginner-friendly, powerful when needed</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2026 AmfreOS Project. All rights reserved.</p>
-        <p>Created by a curious IT guy from Western Kenya</p>
-        
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a> | 
-            <a href="terms.html">Terms of Use</a> | 
-            <a href="https://github.com/amfreos">GitHub</a> | 
-            <a href="contact.html">Contact</a>
-        </div>
-        
-        <div class="footer-kenyan">
-            <div class="kenyan-flag">
-                <div class="flag-stripe stripe-black"></div>
-                <div class="flag-stripe stripe-red"></div>
-                <div class="flag-stripe stripe-green"></div>
+<!-- Gallery -->
+<section id="gallery" class="gallery">
+    <div class="container">
+        <h2>Screenshots</h2>
+        <p class="gallery-description">Desktop environment and system tools</p>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openModal('Assets/1.png', 'Desktop Environment')">
+                <img src="Assets/1.png">
+                <div class="gallery-overlay"><span>Desktop</span></div>
             </div>
-            <span>Proudly made in Kenya • Open Source for everyone</span>
+            <div class="gallery-item" onclick="openModal('Assets/2.png', 'System Tools')">
+                <img src="Assets/2.png">
+                <div class="gallery-overlay"><span>System Tools</span></div>
+            </div>
+            <div class="gallery-item" onclick="openModal('Assets/3.png', 'Installer')">
+                <img src="Assets/3.png">
+                <div class="gallery-overlay"><span>Installer</span></div>
+            </div>
+            <div class="gallery-item" onclick="openModal('Assets/4.png', 'Applications')">
+                <img src="Assets/4.png">
+                <div class="gallery-overlay"><span>Apps</span></div>
+            </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <script src="script.js"></script>
-    <script>
-        // Simple lightbox functionality
-        function openLightbox(imageSrc) {
-            document.getElementById('lightbox-img').src = imageSrc;
-            document.getElementById('lightbox').style.display = 'flex';
-        }
-        
-        function closeLightbox() {
-            document.getElementById('lightbox').style.display = 'none';
-        }
-        
-        // Close lightbox with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeLightbox();
-            }
-        });
-    </script>
+<!-- Docs -->
+<section id="docs" class="docs">
+    <div class="container">
+        <h2>Documentation</h2>
+
+        <div class="doc-item">
+            <div class="doc-header" onclick="toggleDoc('faq')">
+                <h3>FAQ</h3><span class="doc-toggle">+</span>
+            </div>
+            <div class="doc-content" id="faq">
+                <p><strong>Q: What is AmfreOS?</strong></p>
+                <p>A: AmfreOS is a Debian-based daily-driver Linux distribution focused on stability, usability, and privacy.</p>
+
+                <p><strong>Q: Is AmfreOS suitable for beginners?</strong></p>
+                <p>A: Yes. It works out of the box and follows standard Debian workflows.</p>
+
+                <p><strong>Q: Does AmfreOS include anti-forensic tools?</strong></p>
+                <p>A: Yes, optional tools are included to clean logs, wipe swap, and reduce system traces.</p>
+
+                <p><strong>Q: Is AmfreOS open source?</strong></p>
+                <p>A: Yes. It is built entirely on open-source software.</p>
+            </div>
+        </div>
+
+        <div class="doc-item">
+            <div class="doc-header" onclick="toggleDoc('installation')">
+                <h3>Installation</h3><span class="doc-toggle">+</span>
+            </div>
+            <div class="doc-content" id="installation">
+                <ul>
+                    <li>Download the AmfreOS ISO</li>
+                    <li>Flash to USB using Ventoy or Rufus</li>
+                    <li>Boot into live mode or install via Calamares</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="doc-item">
+            <div class="doc-header" onclick="toggleDoc('usage')">
+                <h3>Usage</h3><span class="doc-toggle">+</span>
+            </div>
+            <div class="doc-content" id="usage">
+                <p>
+                    AmfreOS behaves like a normal Linux desktop.
+                    Privacy tools can be enabled or disabled depending on user preference.
+                </p>
+            </div>
+        </div>
+
+        <div class="doc-item">
+            <div class="doc-header" onclick="toggleDoc('disclaimers')">
+                <h3>Important Disclaimers</h3><span class="doc-toggle">+</span>
+            </div>
+            <div class="doc-content" id="disclaimers">
+                <p>
+                    AmfreOS is intended for legal and ethical use.
+                    Users are responsible for how they use the system.
+                </p>
+            </div>
+        </div>
+
+        <p>
+            Full documentation:
+            <a href="https://humphreylidwaji.github.io/AmfreOS/docs.html" target="_blank">
+                AmfreOS Docs
+            </a>
+        </p>
+    </div>
+</section>
+
+<!-- Download -->
+<section id="download" class="download">
+    <div class="container">
+        <h2>Download AmfreOS</h2>
+        <div class="download-card">
+            <h3>Latest Release</h3>
+            <p class="version">1.0</p>
+            <p>Stable daily-driver release</p>
+            <a href="#" class="btn btn-primary">Download ISO</a>
+        </div>
+
+        <div class="system-requirements">
+            <h3>System Requirements</h3>
+            <ul>
+                <li>64-bit processor</li>
+                <li>4 GB RAM minimum (8 GB recommended)</li>
+                <li>20 GB disk space</li>
+                <li>USB drive for installation</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="Assets/logo.png">
+                <span>AmfreOS</span>
+            </div>
+            <p>&copy; 2025 AmfreOS. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Modal -->
+<div id="imageModal" class="modal">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div class="modal-caption" id="modalCaption"></div>
+</div>
+
+<script>
+/* JS unchanged – same behavior */
+function scrollToSection(id){const s=document.getElementById(id);if(s){const n=document.querySelector('.navbar');const h=n?n.offsetHeight:80;window.scrollTo({top:s.offsetTop-h-10,behavior:'smooth'});}}
+function openModal(src,cap){const m=document.getElementById('imageModal');document.getElementById('modalImage').src=src;document.getElementById('modalCaption').textContent=cap;m.style.display='block';}
+function closeModal(){document.getElementById('imageModal').style.display='none';}
+function toggleDoc(id){const c=document.getElementById(id);const t=c.previousElementSibling.querySelector('.doc-toggle');if(c.style.display==='block'){c.style.display='none';t.textContent='+';}else{c.style.display='block';t.textContent='-';}}
+function toggleMobileMenu(){document.querySelector('.nav-menu').classList.toggle('active');document.querySelector('.menu-toggle').classList.toggle('active');}
+</script>
+
 </body>
-
 </html>
+

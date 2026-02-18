@@ -112,24 +112,67 @@
     <div class="container">
         <h2>Documentation</h2>
 
-        <div class="doc-item">
-            <div class="doc-header" onclick="toggleDoc('faq')">
-                <h3>FAQ</h3><span class="doc-toggle">+</span>
-            </div>
-            <div class="doc-content" id="faq">
-                <p><strong>Q: What is AmfreOS?</strong></p>
-                <p>A: AmfreOS is a Debian-based daily-driver Linux distribution focused on stability, usability, and privacy.</p>
+<div class="doc-content" id="faq">
+    <p><strong>Q: What is AmfreOS?</strong></p>
+    <p>
+        A: AmfreOS is a Debian-based daily-driver Linux distribution focused on stability,
+        usability, privacy, and anti-forensic capabilities. It is designed to “just work”
+        while still offering powerful system tools.
+    </p>
 
-                <p><strong>Q: Is AmfreOS suitable for beginners?</strong></p>
-                <p>A: Yes. It works out of the box and follows standard Debian workflows.</p>
+    <p><strong>Q: Is AmfreOS suitable for beginners?</strong></p>
+    <p>
+        A: Yes. AmfreOS works out of the box and follows standard Debian workflows,
+        making it friendly for beginners while still powerful for advanced users.
+    </p>
 
-                <p><strong>Q: Does AmfreOS include anti-forensic tools?</strong></p>
-                <p>A: Yes, optional tools are included to clean logs, wipe swap, and reduce system traces.</p>
+    <p><strong>Q: Does AmfreOS include anti-forensic tools?</strong></p>
+    <p>
+        A: Yes. Optional anti-forensic tools are included to clean logs, wipe swap,
+        reduce system traces, and enhance privacy during shutdown.
+    </p>
 
-                <p><strong>Q: Is AmfreOS open source?</strong></p>
-                <p>A: Yes. It is built entirely on open-source software.</p>
-            </div>
-        </div>
+    <p><strong>Q: Is AmfreOS open source?</strong></p>
+    <p>
+        A: Yes. AmfreOS is built entirely on open-source software and Debian repositories.
+    </p>
+
+    <hr>
+
+    <h4>AmfreOS Commands</h4>
+    <p>
+        No more searching random repositories or risking your system with outdated or
+        fake sources. AmfreOS provides official, safe, and up-to-date command shortcuts
+        for system management and software installation.
+    </p>
+
+    <h4>System Management</h4>
+    <p><code>sudo amfre-update</code> – Update the system quickly, safely, and easily</p>
+    <p><code>sudo amfre-change-dns</code> – Change DNS settings with a guided tool</p>
+
+    <h4>App Installation Shortcuts</h4>
+    <p><code>amfre-install-flatpak</code> – Install Flatpak support</p>
+    <p><code>amfre-install-steam</code> – Install Steam</p>
+    <p><code>amfre-install-brave</code> – Install Brave Browser</p>
+    <p><code>amfre-install-vscode</code> – Install Visual Studio Code</p>
+    <p><code>amfre-install-vibecoding</code> – Install AI IDEs (Cursor, Windsurf, AntiGravity)</p>
+    <p><code>amfre-install-officesuite</code> – Install office suites</p>
+    <p><code>amfre-install-editor</code> – Install video editing & design software</p>
+    <p><code>amfre-install-producer</code> – Install music production & audio tools</p>
+
+    <h4>New Scripts & Utilities</h4>
+    <p><code>amfre-install-davinci-resolve</code> – Install DaVinci Resolve</p>
+    <p><code>amfre-install-printers</code> – Enable printer support (HP, Epson, Canon, Brother)</p>
+    <p><code>amfre-install-winff</code> – Install WinFF video converter frontend</p>
+
+    <h4>Performance & Utilities</h4>
+    <p><code>amfre-install-liquorix</code> – Install Liquorix performance kernel (check NVIDIA compatibility)</p>
+    <p><code>amfre-zram-settings</code> – Enable ZRAM for low-RAM systems</p>
+    <p><code>amfre-install-ollama</code> – Run local AI models</p>
+    <p><code>amfre-net-info</code> – Display detailed network information</p>
+    <p><code>amfre-fetch</code> – Display system information</p>
+</div>
+
 
         <div class="doc-item">
             <div class="doc-header" onclick="toggleDoc('installation')">

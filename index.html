@@ -1,386 +1,542 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AmfreOS - Daily Driver Linux</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="Assets/logo.png" type="image/png">
-    <style>
-        /* Slider gallery styles */
-        .slider-container {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-            position: relative;
-        }
-        .slide img {
-            width: 100%;
-            display: block;
-        }
-        .slide-caption {
-            position: absolute;
-            bottom: 10px;
-            left: 20px;
-            color: #fff;
-            background-color: rgba(0,0,0,0.5);
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        .slider-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2em;
-            color: #fff;
-            background-color: rgba(0,0,0,0.3);
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            z-index: 10;
-        }
-        .slider-arrow.left {
-            left: 10px;
-        }
-        .slider-arrow.right {
-            right: 10px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* Commands copy buttons */
-        .command-container {
-            display: flex;
-            align-items: center;
-            margin: 5px 0;
-        }
-        .command-container button {
-            margin-left: 10px;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
+<title>Amfre - Your Operating System</title>
 
-        /* Center download button */
-        .download-options {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-    </style>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="Assets/logo.png" type="image/png">
+
+<style>
+
+.slider-container{
+position:relative;
+max-width:1000px;
+margin:0 auto;
+overflow:hidden;
+}
+
+.slides{
+display:flex;
+transition:transform 0.5s ease-in-out;
+}
+
+.slide{
+min-width:100%;
+position:relative;
+}
+
+.slide img{
+width:100%;
+display:block;
+}
+
+.slide-caption{
+position:absolute;
+bottom:10px;
+left:20px;
+color:#fff;
+background:rgba(0,0,0,0.5);
+padding:5px 10px;
+border-radius:5px;
+}
+
+.slider-arrow{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+font-size:2em;
+color:#fff;
+background:rgba(0,0,0,0.3);
+border:none;
+cursor:pointer;
+padding:10px;
+z-index:10;
+}
+
+.slider-arrow.left{left:10px;}
+.slider-arrow.right{right:10px;}
+
+.command-container{
+display:flex;
+align-items:center;
+margin:5px 0;
+}
+
+.command-container button{
+margin-left:10px;
+padding:5px 10px;
+cursor:pointer;
+}
+
+.download-options{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+</style>
+
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <img src="Assets/logo.png" alt="AmfreOS Logo">
-                <span>AmfreOS</span>
-            </div>
-            <button class="menu-toggle" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link">Homepage</a></li>
-                <li class="nav-item"><a href="#download" class="nav-link">Download</a></li>
-                <li class="nav-item"><a href="#docs" class="nav-link">Docs</a></li>
-                <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1 class="hero-title">AmfreOS</h1>
-            <p class="hero-subtitle">Daily Driver Linux with Anti-Forensic Tools</p>
-            <p class="hero-description">
-                AmfreOS is a Debian-based Linux distribution focused on stability, usability, privacy, and forensic security. 
-                It can run live or be installed via Calamares.
-            </p>
-            <div class="hero-buttons">
-                <button class="download-btn" onclick="scrollToSection('download')">Download Now</button>
-                <button class="gallery-btn" onclick="scrollToSection('gallery')">View Gallery</button>
-            </div>
-        </div>
-    </section>
+<!-- NAVIGATION -->
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About AmfreOS</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        AmfreOS is a Debian-based Linux daily-driver designed for everyday usage, stability, and enhanced privacy. 
-                        It comes with optional anti-forensic tools that can remove traces, wipe swap, and logs automatically.
-                    </p>
-                    <div class="features">
-                        <div class="feature"><h3>Anti-Forensic</h3><p>Optional tools to clean logs, swap, and system traces</p></div>
-                        <div class="feature"><h3>Stable</h3><p>Debian stable base ensures reliability</p></div>
-                        <div class="feature"><h3>Privacy</h3><p>Focus on minimal telemetry and enhanced privacy</p></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<nav class="navbar">
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2>Gallery</h2>
-            <p class="gallery-description">See AmfreOS in action</p>
-            <div class="slider-container">
-                <div class="slides" id="slides">
-                    <div class="slide"><img src="Assets/1.png" alt="Desktop"><div class="slide-caption">Desktop</div></div>
-                    <div class="slide"><img src="Assets/2.png" alt="Terminal"><div class="slide-caption">Terminal</div></div>
-                    <div class="slide"><img src="Assets/3.png" alt="Calamares Installer"><div class="slide-caption">Installer</div></div>
-                    <div class="slide"><img src="Assets/4.png" alt="Apps"><div class="slide-caption">Applications</div></div>
-                    <div class="slide"><img src="Assets/5.png" alt="Settings"><div class="slide-caption">Settings</div></div>
-                </div>
-                <button class="slider-arrow left" onclick="prevSlide()">&#10094;</button>
-                <button class="slider-arrow right" onclick="nextSlide()">&#10095;</button>
-            </div>
-        </div>
-    </section>
+<div class="nav-container">
 
-    <!-- Docs Section -->
-    <section id="docs" class="docs">
-        <div class="container">
-            <h2>Documentation</h2>
-            <div class="docs-content">
-                <div class="doc-item">
-                    <div class="doc-header" onclick="toggleDoc('faq')">
-                        <h3>FAQ & Commands</h3>
-                        <span class="doc-toggle">+</span>
-                    </div>
-                    <div class="doc-content" id="faq">
-                        <p><strong>Q: What is AmfreOS?</strong></p>
-                        <p>A: AmfreOS is a Debian-based daily-driver Linux distribution focused on stability, usability, and privacy.</p>
+<div class="nav-logo">
+<img src="Assets/logo.png" alt="Amfre Logo">
+<span>Amfre</span>
+</div>
 
-                        <p><strong>Q: Is AmfreOS suitable for beginners?</strong></p>
-                        <p>A: Yes. It works out of the box and follows standard Debian workflows.</p>
+<button class="menu-toggle" onclick="toggleMobileMenu()">
+<span></span>
+<span></span>
+<span></span>
+</button>
 
-                        <p><strong>Q: Does AmfreOS include anti-forensic tools?</strong></p>
-                        <p>A: Yes, optional tools are included to clean logs, wipe swap, and reduce system traces.</p>
+<ul class="nav-menu">
+<li class="nav-item"><a href="#home" class="nav-link">Homepage</a></li>
+<li class="nav-item"><a href="#download" class="nav-link">Download</a></li>
+<li class="nav-item"><a href="#docs" class="nav-link">Docs</a></li>
+<li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+</ul>
 
-                        <p><strong>Q: Is AmfreOS open source?</strong></p>
-                        <p>A: Yes. It is built entirely on open-source software.</p>
+</div>
+</nav>
 
-                        <h3>AmfreOS Commands</h3>
-                        <p>Use these commands to quickly manage your system:</p>
+<!-- HERO -->
 
-                        <div class="command-container">
-                            <code>sudo install-update</code>
-                            <button onclick="copyCommand('sudo install-update')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>sudo install-change-dns</code>
-                            <button onclick="copyCommand('sudo install-change-dns')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>sudo install-flatpak</code>
-                            <button onclick="copyCommand('sudo install-flatpak')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>sudo install-steam</code>
-                            <button onclick="copyCommand('sudo install-steam')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>sudo install-brave</code>
-                            <button onclick="copyCommand('sudo install-brave')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>sudo install-vscode</code>
-                            <button onclick="copyCommand('sudo install-vscode')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>sudo install-vibecoding</code>
-                            <button onclick="copyCommand('sudo install-vibecoding')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>sudo install-officesuite</code>
-                            <button onclick="copyCommand('sudo install-officesuite')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>sudo install-editor</code>
-                            <button onclick="copyCommand('sudo install-editor')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>sudo install-producer</code>
-                            <button onclick="copyCommand('sudo install-producer')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>sudo install-davinci-resolve</code>
-                            <button onclick="copyCommand('sudo install-davinci-resolve')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>sudo install-printers</code>
-                            <button onclick="copyCommand('sudo install-printers')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>sudo install-winff</code>
-                            <button onclick="copyCommand('sudo install-winff')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>sudo install-liquorix</code>
-                            <button onclick="copyCommand('sudo install-liquorix')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>sudo zram-settings</code>
-                            <button onclick="copyCommand('sudo zram-settings')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>sudo install-ollama</code>
-                            <button onclick="copyCommand('sudo install-ollama')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>sudo net-info</code>
-                            <button onclick="copyCommand('sudo net-info')">Copy</button>
-                        </div>
-                        <div class="command-container">
-                            <code>amfre-fetch</code>
-                            <button onclick="copyCommand('amfre-fetch')">Copy</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="home" class="hero">
 
-    <!-- Download Section -->
-    <section id="download" class="download">
-        <div class="container">
-            <h2>Download AmfreOS</h2>
-            <p class="download-description">Get the latest version</p>
-            <div class="download-options">
-                <div class="download-card">
-                    <h3>Latest Release</h3>
-                    <p class="version">1.0</p>
-                    <p>Stable release with all features</p>
-                    <a href="https://sourceforge.net/projects/amfreos/" target="_blank" class="btn btn-primary">Download ISO</a>
-                </div>
-            </div>
-            <div class="system-requirements">
-                <h3>System Requirements</h3>
-                <ul>
-                    <li>64-bit processor</li>
-                    <li>4 GB RAM minimum (8 GB recommended)</li>
-                    <li>20 GB disk space</li>
-                    <li>4GB USB drive</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<div class="container">
 
-    <!-- Developer Section -->
-    <section id="developer" class="developer">
-        <div class="container">
-            <h2>Development & Community</h2>
-            <div class="dev-content">
-                <div class="dev-info">
-                    <h3>Community</h3>
-                    <p>Join community of users and developers. Get support, share ideas, and contribute.</p>
-                    <div class="dev-links">
-                        <a href="https://github.com/AmfreOS" target="_blank" class="btn btn-secondary">GitHub</a>
-                        <a href="https://www.reddit.com/r/linux" target="_blank" class="btn btn-secondary">Reddit</a>
-                    </div>
-                </div>
-                <div class="dev-info">
-                    <h3>Developer</h3>
-                    <p>Connect with the main developer for questions, suggestions, or collaboration.</p>
-                    <div class="dev-links">
-                        <a href="https://github.com/HumphreyLidwaji" target="_blank" class="btn btn-secondary">GitHub</a>
-                        <a href="mailto:ro0t4ro0t@protonmail.com" class="btn btn-secondary">Mail</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<h1 class="hero-title">Amfre</h1>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="Assets/logo.png" alt="AmfreOS Logo">
-                    <span>AmfreOS</span>
-                </div>
-                <p>&copy; 2026 AmfreOS. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+<p class="hero-subtitle">Your Operating System</p>
 
-    <!-- Scripts -->
-    <script>
-        // Smooth scrolling
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                const navbar = document.querySelector('.navbar');
-                const navbarHeight = navbar ? navbar.offsetHeight : 80;
-                const targetPosition = section.offsetTop - navbarHeight - 10;
-                window.scrollTo({top: targetPosition, behavior: 'smooth'});
-            }
-        }
+<p class="hero-description">
+Amfre is a Debian-based operating system designed for stability,
+usability, and privacy. Built as a reliable daily driver with
+powerful tools and a clean Linux experience.
+</p>
 
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const navMenu = document.querySelector('.nav-menu');
-            const menuToggle = document.querySelector('.menu-toggle');
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        }
+<div class="hero-buttons">
 
-        // Documentation toggle
-        function toggleDoc(docId) {
-            const content = document.getElementById(docId);
-            const toggle = content.previousElementSibling.querySelector('.doc-toggle');
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-                toggle.textContent = '+';
-            } else {
-                content.style.display = 'block';
-                toggle.textContent = '-';
-            }
-        }
+<button class="download-btn"
+onclick="scrollToSection('download')">
+Download Now </button>
 
-        // Copy commands
-        function copyCommand(cmd) {
-            navigator.clipboard.writeText(cmd).then(() => {
-                alert(`Copied: ${cmd}`);
-            });
-        }
+<button class="gallery-btn"
+onclick="scrollToSection('gallery')">
+View Gallery </button>
 
-        // Slider gallery
-        let currentSlide = 0;
-        const slides = document.getElementById('slides');
-        const totalSlides = slides.children.length;
+</div>
 
-        function showSlide(index) {
-            slides.style.transform = `translateX(-${index * 100}%)`;
-        }
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
-        }
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            showSlide(currentSlide);
-        }
+</div>
+</section>
 
-        // Auto slide every 5s
-        setInterval(nextSlide, 5000);
-    </script>
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+<div class="container">
+
+<h2>About Amfre</h2>
+
+<div class="about-content">
+
+<div class="about-text">
+
+<p>
+Amfre is a Debian-based operating system designed for everyday computing.
+It focuses on stability, usability, and enhanced privacy while remaining
+lightweight and reliable.
+</p>
+
+<div class="features">
+
+<div class="feature">
+<h3>Privacy Focused</h3>
+<p>Minimal telemetry and enhanced privacy tools</p>
+</div>
+
+<div class="feature">
+<h3>Stable</h3>
+<p>Built on Debian stable for long-term reliability</p>
+</div>
+
+<div class="feature">
+<h3>Developer Friendly</h3>
+<p>Tools and scripts for developers and creators</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery" class="gallery">
+
+<div class="container">
+
+<h2>Gallery</h2>
+
+<p class="gallery-description">
+See Amfre in action
+</p>
+
+<div class="slider-container">
+
+<div class="slides" id="slides">
+
+<div class="slide">
+<img src="Assets/1.png">
+<div class="slide-caption">Desktop</div>
+</div>
+
+<div class="slide">
+<img src="Assets/2.png">
+<div class="slide-caption">Terminal</div>
+</div>
+
+<div class="slide">
+<img src="Assets/3.png">
+<div class="slide-caption">Installer</div>
+</div>
+
+<div class="slide">
+<img src="Assets/4.png">
+<div class="slide-caption">Applications</div>
+</div>
+
+<div class="slide">
+<img src="Assets/5.png">
+<div class="slide-caption">Settings</div>
+</div>
+
+</div>
+
+<button class="slider-arrow left"
+onclick="prevSlide()">❮</button>
+
+<button class="slider-arrow right"
+onclick="nextSlide()">❯</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DOCUMENTATION -->
+
+<section id="docs" class="docs">
+
+<div class="container">
+
+<h2>Documentation</h2>
+
+<div class="docs-content">
+
+<div class="doc-item">
+
+<div class="doc-header"
+onclick="toggleDoc('faq')">
+
+<h3>FAQ & Commands</h3>
+<span class="doc-toggle">+</span>
+
+</div>
+
+<div class="doc-content" id="faq">
+
+<p><strong>Q: What is Amfre?</strong></p>
+<p>
+Amfre is a Debian-based operating system focused on
+stability, usability and privacy.
+</p>
+
+<p><strong>Q: Is Amfre beginner friendly?</strong></p>
+<p>
+Yes. It works out of the box and follows standard
+Debian workflows.
+</p>
+
+<p><strong>Q: Is Amfre open source?</strong></p>
+<p>
+Yes. It is built entirely on open-source software.
+</p>
+
+<h3>Amfre Commands</h3>
+
+<div class="command-container">
+<code>sudo install-update</code>
+<button onclick="copyCommand('sudo install-update')">Copy</button>
+</div>
+
+<div class="command-container">
+<code>sudo install-flatpak</code>
+<button onclick="copyCommand('sudo install-flatpak')">Copy</button>
+</div>
+
+<div class="command-container">
+<code>sudo install-steam</code>
+<button onclick="copyCommand('sudo install-steam')">Copy</button>
+</div>
+
+<div class="command-container">
+<code>sudo install-brave</code>
+<button onclick="copyCommand('sudo install-brave')">Copy</button>
+</div>
+
+<div class="command-container">
+<code>sudo install-vscode</code>
+<button onclick="copyCommand('sudo install-vscode')">Copy</button>
+</div>
+
+<div class="command-container">
+<code>sudo install-davinci-resolve</code>
+<button onclick="copyCommand('sudo install-davinci-resolve')">Copy</button>
+</div>
+
+<div class="command-container">
+<code>sudo install-printers</code>
+<button onclick="copyCommand('sudo install-printers')">Copy</button>
+</div>
+
+<div class="command-container">
+<code>sudo net-info</code>
+<button onclick="copyCommand('sudo net-info')">Copy</button>
+</div>
+
+<div class="command-container">
+<code>amfre-fetch</code>
+<button onclick="copyCommand('amfre-fetch')">Copy</button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DOWNLOAD -->
+
+<section id="download" class="download">
+
+<div class="container">
+
+<h2>Download Amfre</h2>
+
+<p class="download-description">
+Get the latest version
+</p>
+
+<div class="download-options">
+
+<div class="download-card">
+
+<h3>Latest Release</h3>
+
+<p class="version">1.0</p>
+
+<p>Stable release with all core features</p>
+
+<a href="https://sourceforge.net/projects/amfreos/"
+target="_blank"
+class="btn btn-primary">
+Download ISO </a>
+
+</div>
+
+</div>
+
+<div class="system-requirements">
+
+<h3>System Requirements</h3>
+
+<ul>
+<li>64-bit processor</li>
+<li>4 GB RAM minimum (8 GB recommended)</li>
+<li>20 GB disk space</li>
+<li>4GB USB drive</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- COMMUNITY -->
+
+<section id="developer" class="developer">
+
+<div class="container">
+
+<h2>Development & Community</h2>
+
+<div class="dev-content">
+
+<div class="dev-info">
+
+<h3>Community</h3>
+
+<p>
+Join the community of users and developers.
+</p>
+
+<div class="dev-links">
+
+<a href="https://github.com/AmfreOS"
+class="btn btn-secondary">GitHub</a>
+
+<a href="https://www.reddit.com/r/linux"
+class="btn btn-secondary">Reddit</a>
+
+</div>
+
+</div>
+
+<div class="dev-info">
+
+<h3>Developer</h3>
+
+<p>
+Connect with the main developer.
+</p>
+
+<div class="dev-links">
+
+<a href="https://github.com/HumphreyLidwaji"
+class="btn btn-secondary">GitHub</a>
+
+<a href="mailto:ro0t4ro0t@protonmail.com"
+class="btn btn-secondary">Mail</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-content">
+
+<div class="footer-logo">
+
+<img src="Assets/logo.png">
+
+<span>Amfre</span>
+
+</div>
+
+<p>&copy; 2026 Amfre — Your Operating System</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- SCRIPTS -->
+
+<script>
+
+function scrollToSection(sectionId){
+
+const section=document.getElementById(sectionId);
+const navbar=document.querySelector('.navbar');
+const navbarHeight=navbar?navbar.offsetHeight:80;
+
+window.scrollTo({
+top:section.offsetTop-navbarHeight-10,
+behavior:'smooth'
+});
+
+}
+
+function toggleMobileMenu(){
+
+const navMenu=document.querySelector('.nav-menu');
+const menuToggle=document.querySelector('.menu-toggle');
+
+navMenu.classList.toggle('active');
+menuToggle.classList.toggle('active');
+
+}
+
+function toggleDoc(docId){
+
+const content=document.getElementById(docId);
+
+if(content.style.display==="block"){
+content.style.display="none";
+}
+else{
+content.style.display="block";
+}
+
+}
+
+function copyCommand(cmd){
+
+navigator.clipboard.writeText(cmd)
+.then(()=>{
+alert("Copied: "+cmd);
+});
+
+}
+
+let currentSlide=0;
+const slides=document.getElementById('slides');
+const totalSlides=slides.children.length;
+
+function showSlide(index){
+slides.style.transform=`translateX(-${index*100}%)`;
+}
+
+function nextSlide(){
+currentSlide=(currentSlide+1)%totalSlides;
+showSlide(currentSlide);
+}
+
+function prevSlide(){
+currentSlide=(currentSlide-1+totalSlides)%totalSlides;
+showSlide(currentSlide);
+}
+
+setInterval(nextSlide,5000);
+
+</script>
+
 </body>
 </html>
-

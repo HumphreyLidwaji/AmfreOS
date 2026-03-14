@@ -4,20 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AmfreOS — Privacy & Security OS</title>
+<title>Amfre - Your Operating System</title>
 
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="Assets/logo.png" type="image/png">
 
 <style>
-/* --- Slider --- */
+/* --- Slider and Captions --- */
 .slider-container{
 position:relative;
 max-width:1000px;
 margin:0 auto;
 overflow:hidden;
-border-radius:10px;
-box-shadow:0 0 20px rgba(0,0,0,0.3);
 }
 
 .slides{
@@ -33,7 +31,6 @@ position:relative;
 .slide img{
 width:100%;
 display:block;
-border-radius:10px;
 }
 
 .slide-caption{
@@ -41,11 +38,9 @@ position:absolute;
 bottom:10px;
 left:20px;
 color:#fff;
-background:rgba(0,0,0,0.6);
-padding:8px 12px;
+background:rgba(0,0,0,0.5);
+padding:5px 10px;
 border-radius:5px;
-font-weight:600;
-font-size:0.95em;
 }
 
 .slider-arrow{
@@ -54,17 +49,11 @@ top:50%;
 transform:translateY(-50%);
 font-size:2em;
 color:#fff;
-background:rgba(0,0,0,0.4);
+background:rgba(0,0,0,0.3);
 border:none;
 cursor:pointer;
 padding:10px;
 z-index:10;
-border-radius:50%;
-transition:0.3s;
-}
-
-.slider-arrow:hover{
-background:rgba(0,0,0,0.7);
 }
 
 .slider-arrow.left{left:10px;}
@@ -81,15 +70,6 @@ margin:5px 0;
 margin-left:10px;
 padding:5px 10px;
 cursor:pointer;
-background:#00b894;
-border:none;
-color:#fff;
-border-radius:4px;
-transition:0.2s;
-}
-
-.command-container button:hover{
-background:#019875;
 }
 
 /* --- Download Cards --- */
@@ -99,201 +79,8 @@ justify-content:center;
 flex-wrap:wrap;
 gap:20px;
 }
-
-.download-card{
-background:#1e272e;
-color:#fff;
-padding:20px;
-border-radius:10px;
-text-align:center;
-box-shadow:0 0 15px rgba(0,0,0,0.3);
-}
-
-.download-card h3{
-margin-bottom:10px;
-color:#00cec9;
-}
-
-.download-card .btn{
-display:inline-block;
-padding:10px 20px;
-margin-top:10px;
-background:#00b894;
-color:#fff;
-border-radius:5px;
-text-decoration:none;
-transition:0.2s;
-}
-
-.download-card .btn:hover{
-background:#019875;
-}
-
-/* --- Footer --- */
-.footer{
-background:#2d3436;
-color:#dfe6e9;
-padding:20px 0;
-text-align:center;
-}
-
-.footer img{
-height:40px;
-vertical-align:middle;
-margin-right:10px;
-}
-
-/* --- Hero Section --- */
-.hero{
-padding:60px 20px;
-background:linear-gradient(135deg,#00b894,#00cec9);
-color:#fff;
-text-align:center;
-}
-
-.hero-title{
-font-size:3em;
-margin-bottom:10px;
-}
-
-.hero-subtitle{
-font-size:1.5em;
-margin-bottom:20px;
-}
-
-.hero-buttons button{
-margin:10px;
-padding:12px 25px;
-border:none;
-border-radius:5px;
-cursor:pointer;
-color:#fff;
-background:#2d3436;
-transition:0.3s;
-}
-
-.hero-buttons button:hover{
-background:#1e272e;
-}
-
-/* --- About Section --- */
-.about{
-padding:60px 20px;
-background:#dfe6e9;
-color:#2d3436;
-}
-
-.about h2{
-text-align:center;
-margin-bottom:40px;
-}
-
-.features{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-margin-top:30px;
-}
-
-.feature{
-background:#fff;
-padding:20px;
-border-radius:10px;
-width:250px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
-text-align:center;
-}
-
-/* --- Gallery --- */
-.gallery{
-padding:60px 20px;
-background:#2d3436;
-color:#fff;
-}
-
-.gallery h2, .docs h2, .developer h2, .download h2{
-text-align:center;
-margin-bottom:30px;
-}
-
-/* --- Documentation --- */
-.docs{
-padding:60px 20px;
-background:#dfe6e9;
-color:#2d3436;
-}
-
-.doc-item{
-margin-bottom:20px;
-background:#fff;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
-}
-
-.doc-header{
-padding:15px 20px;
-cursor:pointer;
-display:flex;
-justify-content:space-between;
-align-items:center;
-font-weight:600;
-background:#00cec9;
-color:#fff;
-border-radius:10px 10px 0 0;
-}
-
-.doc-content{
-padding:15px 20px;
-display:none;
-}
-
-/* --- Developer / Community --- */
-.developer{
-padding:60px 20px;
-background:#dfe6e9;
-color:#2d3436;
-}
-
-.dev-content{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
-
-.dev-info{
-background:#fff;
-padding:20px;
-border-radius:10px;
-width:300px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
-text-align:center;
-}
-
-.dev-info .btn{
-display:inline-block;
-padding:8px 15px;
-margin:5px;
-border-radius:5px;
-text-decoration:none;
-color:#fff;
-background:#00b894;
-transition:0.2s;
-}
-
-.dev-info .btn:hover{
-background:#019875;
-}
-
-/* --- Responsive --- */
-@media(max-width:768px){
-.features, .dev-content{
-flex-direction:column;
-align-items:center;
-}
-}
 </style>
+
 </head>
 
 <body>
@@ -303,7 +90,7 @@ align-items:center;
 <div class="nav-container">
 <div class="nav-logo">
 <img src="Assets/logo.png" alt="Amfre Logo">
-<span>AmfreOS</span>
+<span>Amfre</span>
 </div>
 <button class="menu-toggle" onclick="toggleMobileMenu()">
 <span></span>
@@ -311,11 +98,10 @@ align-items:center;
 <span></span>
 </button>
 <ul class="nav-menu">
-<li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+<li class="nav-item"><a href="#home" class="nav-link">Homepage</a></li>
 <li class="nav-item"><a href="#download" class="nav-link">Download</a></li>
 <li class="nav-item"><a href="#docs" class="nav-link">Docs</a></li>
 <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
-<li class="nav-item"><a href="#community" class="nav-link">Community</a></li>
 </ul>
 </div>
 </nav>
@@ -323,16 +109,17 @@ align-items:center;
 <!-- HERO -->
 <section id="home" class="hero">
 <div class="container">
-<h1 class="hero-title">AmfreOS</h1>
-<p class="hero-subtitle">Secure, Privacy-Focused, SOC-Ready Linux</p>
+<h1 class="hero-title">Amfre</h1>
+<p class="hero-subtitle">Your Operating System</p>
 <p class="hero-description">
-AmfreOS is designed for schools, clinics, home labs, and developers. 
-It comes with integrated security tools, self-healing scripts, Wazuh monitoring, and privacy enhancements.
+Amfre is a Debian-based operating system designed for stability,
+usability, and privacy. Built as a reliable daily driver with
+powerful tools and a clean Linux experience.
 </p>
 
-<!-- Hero Illustration -->
-<div class="hero-illustration" style="margin-top:20px; text-align:center;">
-<img src="Assets/hero.gif" alt="AmfreOS Hero Illustration" style="max-width:100%; border-radius:10px; box-shadow:0 0 20px rgba(0,0,0,0.3);">
+<!-- Hero Illustration Placeholder -->
+<div style="margin-top:20px; text-align:center;">
+<img src="Assets/hero-placeholder.gif" alt="Hero Illustration" style="max-width:100%; border-radius:10px;">
 </div>
 
 <div class="hero-buttons">
@@ -345,83 +132,32 @@ It comes with integrated security tools, self-healing scripts, Wazuh monitoring,
 <!-- ABOUT -->
 <section id="about" class="about">
 <div class="container">
-<h2>About AmfreOS</h2>
+<h2>About Amfre</h2>
 <div class="about-content">
 <div class="about-text">
 <p>
-AmfreOS provides a secure, stable, and privacy-conscious computing environment for daily use and learning. 
-It includes a pre-integrated SOC stack, auto-enrollment for endpoints, and advanced self-healing tools.
+Amfre is a Debian-based operating system designed for everyday computing.
+It focuses on stability, usability, and enhanced privacy while remaining
+lightweight and reliable.
 </p>
 
-<!-- Feature Illustrations -->
 <div class="features">
 <div class="feature">
-<h3>Privacy & Security</h3>
-<p>Minimal telemetry, built-in firewall, antivirus, and intrusion detection.</p>
-<img src="Assets/privacy.gif" alt="Privacy Illustration" style="width:100%; max-width:250px; margin-top:10px; border-radius:8px;">
+<h3>Privacy Focused</h3>
+<p>Minimal telemetry and enhanced privacy tools</p>
+<img src="Assets/privacy-placeholder.gif" alt="Privacy Illustration" style="width:100%; max-width:250px; margin-top:10px; border-radius:8px;">
 </div>
 
 <div class="feature">
-<h3>Stable & Reliable</h3>
-<p>Based on Debian stable with long-term support.</p>
-<img src="Assets/stable.png" alt="Stable System Illustration" style="width:100%; max-width:250px; margin-top:10px; border-radius:8px;">
+<h3>Stable</h3>
+<p>Built on Debian stable for long-term reliability</p>
+<img src="Assets/stable-placeholder.gif" alt="Stable Illustration" style="width:100%; max-width:250px; margin-top:10px; border-radius:8px;">
 </div>
 
 <div class="feature">
-<h3>Education & Labs</h3>
-<p>Perfect for schools, clinics, home labs, and small offices.</p>
-<img src="Assets/education.gif" alt="Education Labs Illustration" style="width:100%; max-width:250px; margin-top:10px; border-radius:8px;">
-</div>
-
-<div class="feature">
-<h3>Developer-Friendly</h3>
-<p>Scripts, dashboards, and automation tools for SOC deployment.</p>
-<img src="Assets/developer.png" alt="Developer Illustration" style="width:100%; max-width:250px; margin-top:10px; border-radius:8px;">
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- DOCUMENTATION -->
-<section id="docs" class="docs">
-<div class="container">
-<h2>Documentation & Commands</h2>
-
-<!-- Commands Illustration -->
-<div class="doc-illustration" style="margin-bottom:20px; text-align:center;">
-<img src="Assets/commands.gif" alt="Command Demo GIF" style="max-width:100%; border-radius:10px; box-shadow:0 0 15px rgba(0,0,0,0.3);">
-</div>
-
-<div class="docs-content">
-<div class="doc-item">
-<div class="doc-header" onclick="toggleDoc('faq')">
-<h3>FAQ & Commands</h3>
-<span class="doc-toggle">+</span>
-</div>
-<div class="doc-content" id="faq">
-<p><strong>Q: What is AmfreOS?</strong></p>
-<p>AmfreOS is a Debian-based OS with integrated security, monitoring, and privacy features.</p>
-
-<h3>AmfreOS Commands</h3>
-
-<div class="command-container">
-<code>amfre-security</code>
-<button onclick="copyCommand('amfre-security')">Copy</button>
-<img src="Assets/amfre-security.gif" alt="amfre-security Demo" style="width:100%; max-width:200px; margin-left:10px; border-radius:5px;">
-</div>
-
-<div class="command-container">
-<code>amfre-services</code>
-<button onclick="copyCommand('amfre-services')">Copy</button>
-<img src="Assets/amfre-services.gif" alt="amfre-services Demo" style="width:100%; max-width:200px; margin-left:10px; border-radius:5px;">
-</div>
-
-<div class="command-container">
-<code>amfre-deploy</code>
-<button onclick="copyCommand('amfre-deploy')">Copy</button>
-<img src="Assets/amfre-deploy.gif" alt="Deployment Demo" style="width:100%; max-width:200px; margin-left:10px; border-radius:5px;">
+<h3>Developer Friendly</h3>
+<p>Tools and scripts for developers and creators</p>
+<img src="Assets/developer-placeholder.gif" alt="Developer Illustration" style="width:100%; max-width:250px; margin-top:10px; border-radius:8px;">
 </div>
 
 </div>
@@ -434,32 +170,83 @@ It includes a pre-integrated SOC stack, auto-enrollment for endpoints, and advan
 <section id="gallery" class="gallery">
 <div class="container">
 <h2>Gallery</h2>
-<p class="gallery-description">See AmfreOS in action</p>
+<p class="gallery-description">See Amfre in action</p>
+
 <div class="slider-container">
 <div class="slides" id="slides">
 <div class="slide">
 <img src="Assets/1.png">
-<div class="slide-caption">Desktop & Workspace</div>
+<div class="slide-caption">Desktop</div>
 </div>
+
 <div class="slide">
 <img src="Assets/2.gif">
-<div class="slide-caption">Terminal & Security Tools</div>
+<div class="slide-caption">Terminal</div>
 </div>
+
 <div class="slide">
 <img src="Assets/3.gif">
-<div class="slide-caption">Installer & Auto-Enrollment</div>
+<div class="slide-caption">Installer</div>
 </div>
+
 <div class="slide">
 <img src="Assets/4.gif">
-<div class="slide-caption">Wazuh Dashboard Demo</div>
+<div class="slide-caption">Applications</div>
 </div>
+
 <div class="slide">
 <img src="Assets/5.gif">
-<div class="slide-caption">Self-Healing Scripts in Action</div>
+<div class="slide-caption">Settings</div>
 </div>
+
 </div>
+
 <button class="slider-arrow left" onclick="prevSlide()">❮</button>
 <button class="slider-arrow right" onclick="nextSlide()">❯</button>
+</div>
+</div>
+</section>
+
+<!-- DOCUMENTATION -->
+<section id="docs" class="docs">
+<div class="container">
+<h2>Documentation</h2>
+
+<div class="docs-content">
+<div class="doc-item">
+<div class="doc-header" onclick="toggleDoc('faq')">
+<h3>FAQ & Commands</h3>
+<span class="doc-toggle">+</span>
+</div>
+
+<div class="doc-content" id="faq">
+<p><strong>Q: What is Amfre?</strong></p>
+<p>Amfre is a Debian-based operating system focused on
+stability, usability and privacy.</p>
+
+<p><strong>Q: Is Amfre beginner friendly?</strong></p>
+<p>Yes. It works out of the box and follows standard
+Debian workflows.</p>
+
+<p><strong>Q: Is Amfre open source?</strong></p>
+<p>Yes. It is built entirely on open-source software.</p>
+
+<h3>Amfre Commands</h3>
+
+<div class="command-container">
+<code>sudo install-update</code>
+<button onclick="copyCommand('sudo install-update')">Copy</button>
+<img src="Assets/install-update.gif" alt="Install Update GIF" style="width:100px; margin-left:10px;">
+</div>
+
+<div class="command-container">
+<code>amfre-fetch</code>
+<button onclick="copyCommand('amfre-fetch')">Copy</button>
+<img src="Assets/amfre-fetch.gif" alt="Fetch GIF" style="width:100px; margin-left:10px;">
+</div>
+
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -467,49 +254,26 @@ It includes a pre-integrated SOC stack, auto-enrollment for endpoints, and advan
 <!-- DOWNLOAD -->
 <section id="download" class="download">
 <div class="container">
-<h2>Download AmfreOS</h2>
-<p class="download-description">Get the latest stable version</p>
+<h2>Download Amfre</h2>
+<p class="download-description">Get the latest version</p>
+
 <div class="download-options">
 <div class="download-card">
 <h3>Latest Release</h3>
 <p class="version">1.0</p>
-<p>Full security-ready OS with integrated SOC stack and self-healing.</p>
+<p>Stable release with all core features</p>
 <a href="https://sourceforge.net/projects/amfreos/" target="_blank" class="btn btn-primary">Download ISO</a>
 </div>
 </div>
+
 <div class="system-requirements">
 <h3>System Requirements</h3>
 <ul>
 <li>64-bit processor</li>
 <li>4 GB RAM minimum (8 GB recommended)</li>
 <li>20 GB disk space</li>
-<li>4 GB USB drive</li>
+<li>4GB USB drive</li>
 </ul>
-</div>
-</div>
-</section>
-
-<!-- COMMUNITY -->
-<section id="community" class="developer">
-<div class="container">
-<h2>Community & Development</h2>
-<div class="dev-content">
-<div class="dev-info">
-<h3>Community</h3>
-<p>Join the AmfreOS users and developers community.</p>
-<div class="dev-links">
-<a href="https://github.com/AmfreOS" class="btn btn-secondary">GitHub</a>
-<a href="https://www.reddit.com/r/linux" class="btn btn-secondary">Reddit</a>
-</div>
-</div>
-<div class="dev-info">
-<h3>Developer</h3>
-<p>Connect with the main developer.</p>
-<div class="dev-links">
-<a href="https://github.com/HumphreyLidwaji" class="btn btn-secondary">GitHub</a>
-<a href="mailto:ro0t4ro0t@protonmail.com" class="btn btn-secondary">Mail</a>
-</div>
-</div>
 </div>
 </div>
 </section>
@@ -520,33 +284,32 @@ It includes a pre-integrated SOC stack, auto-enrollment for endpoints, and advan
 <div class="footer-content">
 <div class="footer-logo">
 <img src="Assets/logo.png">
-<span>AmfreOS</span>
+<span>Amfre</span>
 </div>
-<p>&copy; 2026 AmfreOS — Privacy & Security OS</p>
+<p>&copy; 2026 Amfre — Your Operating System</p>
 </div>
 </div>
 </footer>
 
-<!-- SCRIPTS -->
 <script>
 function scrollToSection(sectionId){
-  const section=document.getElementById(sectionId);
-  const navbar=document.querySelector('.navbar');
-  const navbarHeight=navbar?navbar.offsetHeight:80;
-  window.scrollTo({top:section.offsetTop-navbarHeight-10,behavior:'smooth'});
+const section=document.getElementById(sectionId);
+const navbar=document.querySelector('.navbar');
+const navbarHeight=navbar?navbar.offsetHeight:80;
+window.scrollTo({top:section.offsetTop-navbarHeight-10,behavior:'smooth'});
 }
 function toggleMobileMenu(){
-  const navMenu=document.querySelector('.nav-menu');
-  const menuToggle=document.querySelector('.menu-toggle');
-  navMenu.classList.toggle('active');
-  menuToggle.classList.toggle('active');
+const navMenu=document.querySelector('.nav-menu');
+const menuToggle=document.querySelector('.menu-toggle');
+navMenu.classList.toggle('active');
+menuToggle.classList.toggle('active');
 }
 function toggleDoc(docId){
-  const content=document.getElementById(docId);
-  content.style.display=(content.style.display==="block")?"none":"block";
+const content=document.getElementById(docId);
+content.style.display=(content.style.display==="block")?"none":"block";
 }
 function copyCommand(cmd){
-  navigator.clipboard.writeText(cmd).then(()=>{alert("Copied: "+cmd);});
+navigator.clipboard.writeText(cmd).then(()=>{alert("Copied: "+cmd);});
 }
 let currentSlide=0;
 const slides=document.getElementById('slides');

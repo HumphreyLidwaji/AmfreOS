@@ -10,54 +10,37 @@
 <link rel="icon" href="Assets/logo.png" type="image/png">
 
 <style>
-/* --- Slider and Captions --- */
-.slider-container{
-position:relative;
-max-width:1000px;
-margin:0 auto;
-overflow:hidden;
-}
-
-.slides{
+/* --- Card Styles --- */
+.card-container{
 display:flex;
-transition:transform 0.5s ease-in-out;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+margin-top:20px;
 }
 
-.slide{
-min-width:100%;
-position:relative;
+.card{
+background:rgba(0,0,0,0.05);
+border-radius:10px;
+overflow:hidden;
+width:220px;
+text-align:center;
+transition:transform 0.2s;
 }
 
-.slide img{
+.card:hover{
+transform:scale(1.05);
+}
+
+.card img{
 width:100%;
 display:block;
 }
 
-.slide-caption{
-position:absolute;
-bottom:10px;
-left:20px;
-color:#fff;
-background:rgba(0,0,0,0.5);
-padding:5px 10px;
-border-radius:5px;
-}
-
-.slider-arrow{
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-font-size:2em;
-color:#fff;
-background:rgba(0,0,0,0.3);
-border:none;
-cursor:pointer;
+.card-caption{
 padding:10px;
-z-index:10;
+font-weight:bold;
 }
-
-.slider-arrow.left{left:10px;}
-.slider-arrow.right{right:10px;}
 
 /* --- Command Buttons --- */
 .command-container{
@@ -172,37 +155,31 @@ lightweight and reliable.
 <h2>Gallery</h2>
 <p class="gallery-description">See Amfre in action</p>
 
-<div class="slider-container">
-<div class="slides" id="slides">
-<div class="slide">
-<img src="Assets/1.png">
-<div class="slide-caption">Desktop</div>
+<div class="card-container">
+<div class="card">
+<img src="Assets/1.png" alt="Desktop">
+<div class="card-caption">Desktop</div>
 </div>
 
-<div class="slide">
-<img src="Assets/2.gif">
-<div class="slide-caption">Terminal</div>
+<div class="card">
+<img src="Assets/2.gif" alt="Terminal">
+<div class="card-caption">Terminal</div>
 </div>
 
-<div class="slide">
-<img src="Assets/3.gif">
-<div class="slide-caption">Installer</div>
+<div class="card">
+<img src="Assets/3.gif" alt="Installer">
+<div class="card-caption">Installer</div>
 </div>
 
-<div class="slide">
-<img src="Assets/4.gif">
-<div class="slide-caption">Applications</div>
+<div class="card">
+<img src="Assets/4.gif" alt="Applications">
+<div class="card-caption">Applications</div>
 </div>
 
-<div class="slide">
-<img src="Assets/5.gif">
-<div class="slide-caption">Settings</div>
+<div class="card">
+<img src="Assets/5.gif" alt="Settings">
+<div class="card-caption">Settings</div>
 </div>
-
-</div>
-
-<button class="slider-arrow left" onclick="prevSlide()">❮</button>
-<button class="slider-arrow right" onclick="nextSlide()">❯</button>
 </div>
 </div>
 </section>
@@ -311,13 +288,6 @@ content.style.display=(content.style.display==="block")?"none":"block";
 function copyCommand(cmd){
 navigator.clipboard.writeText(cmd).then(()=>{alert("Copied: "+cmd);});
 }
-let currentSlide=0;
-const slides=document.getElementById('slides');
-const totalSlides=slides.children.length;
-function showSlide(index){slides.style.transform=`translateX(-${index*100}%)`;}
-function nextSlide(){currentSlide=(currentSlide+1)%totalSlides;showSlide(currentSlide);}
-function prevSlide(){currentSlide=(currentSlide-1+totalSlides)%totalSlides;showSlide(currentSlide);}
-setInterval(nextSlide,5000);
 </script>
 
 </body>

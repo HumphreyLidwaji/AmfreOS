@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Amfre - Your Operating System</title>
+<title>AmfreOS - Your Security Operating System</title>
 
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="Assets/logo.png" type="image/png">
@@ -62,6 +62,33 @@ justify-content:center;
 flex-wrap:wrap;
 gap:20px;
 }
+
+/* --- SOC Feature Cards --- */
+.soc-card{
+background:rgba(0,0,0,0.05);
+border-radius:10px;
+padding:15px;
+width:220px;
+text-align:center;
+transition:transform 0.2s;
+}
+
+.soc-card:hover{
+transform:scale(1.05);
+}
+
+.soc-card img{
+width:80px;
+margin-bottom:10px;
+}
+
+/* --- Release Notes --- */
+.release-note{
+background:rgba(0,0,0,0.05);
+border-radius:10px;
+padding:10px 15px;
+margin-bottom:10px;
+}
 </style>
 
 </head>
@@ -72,8 +99,8 @@ gap:20px;
 <nav class="navbar">
 <div class="nav-container">
 <div class="nav-logo">
-<img src="Assets/logo.png" alt="Amfre Logo">
-<span>Amfre</span>
+<img src="Assets/logo.png" alt="AmfreOS Logo">
+<span>AmfreOS</span>
 </div>
 <button class="menu-toggle" onclick="toggleMobileMenu()">
 <span></span>
@@ -85,6 +112,8 @@ gap:20px;
 <li class="nav-item"><a href="#download" class="nav-link">Download</a></li>
 <li class="nav-item"><a href="#docs" class="nav-link">Docs</a></li>
 <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+<li class="nav-item"><a href="#soc" class="nav-link">SOC Features</a></li>
+<li class="nav-item"><a href="#releases" class="nav-link">Release Notes</a></li>
 </ul>
 </div>
 </nav>
@@ -92,15 +121,14 @@ gap:20px;
 <!-- HERO -->
 <section id="home" class="hero">
 <div class="container">
-<h1 class="hero-title">Amfre</h1>
-<p class="hero-subtitle">Your Operating System</p>
+<h1 class="hero-title">AmfreOS</h1>
+<p class="hero-subtitle">Your Security-Focused Operating System</p>
 <p class="hero-description">
-Amfre is a Debian-based operating system designed for stability,
-usability, and privacy. Built as a reliable daily driver with
-powerful tools and a clean Linux experience.
+AmfreOS is a Debian-based OS built for security, stability, and usability. 
+It integrates a full SOC stack with Wazuh, Suricata IDS, TheHive, MISP, and Velociraptor.
+Designed for home labs, schools, and clinics, it protects endpoints automatically while staying user-friendly.
 </p>
 
-<!-- Hero Illustration Placeholder -->
 <div style="margin-top:20px; text-align:center;">
 <img src="Assets/hero-placeholder.gif" alt="Hero Illustration" style="max-width:100%; border-radius:10px;">
 </div>
@@ -115,32 +143,31 @@ powerful tools and a clean Linux experience.
 <!-- ABOUT -->
 <section id="about" class="about">
 <div class="container">
-<h2>About Amfre</h2>
+<h2>About AmfreOS</h2>
 <div class="about-content">
 <div class="about-text">
 <p>
-Amfre is a Debian-based operating system designed for everyday computing.
-It focuses on stability, usability, and enhanced privacy while remaining
-lightweight and reliable.
+AmfreOS is a Debian-based operating system designed for secure computing. 
+It focuses on stability, usability, and privacy while providing enterprise-grade security tools pre-installed.
 </p>
 
 <div class="features">
 <div class="feature">
-<h3>Privacy Focused</h3>
-<p>Minimal telemetry and enhanced privacy tools</p>
-<img src="Assets/privacy-placeholder.gif" alt="Privacy Illustration" style="width:100%; max-width:250px; margin-top:10px; border-radius:8px;">
+<h3>Security-Focused</h3>
+<p>Preinstalled SOC stack: Wazuh, Suricata, TheHive, MISP, Velociraptor</p>
+<img src="Assets/security-placeholder.gif" alt="SOC Illustration" style="width:100%; max-width:250px; margin-top:10px; border-radius:8px;">
 </div>
 
 <div class="feature">
-<h3>Stable</h3>
-<p>Built on Debian stable for long-term reliability</p>
+<h3>Stable & Reliable</h3>
+<p>Built on Debian stable for long-term support</p>
 <img src="Assets/stable-placeholder.gif" alt="Stable Illustration" style="width:100%; max-width:250px; margin-top:10px; border-radius:8px;">
 </div>
 
 <div class="feature">
-<h3>Developer Friendly</h3>
-<p>Tools and scripts for developers and creators</p>
-<img src="Assets/developer-placeholder.gif" alt="Developer Illustration" style="width:100%; max-width:250px; margin-top:10px; border-radius:8px;">
+<h3>Auto-Healing & Hardening</h3>
+<p>Automatic endpoint protection, firewall, malware scanning, and security hardening</p>
+<img src="Assets/hardening-placeholder.gif" alt="Hardening Illustration" style="width:100%; max-width:250px; margin-top:10px; border-radius:8px;">
 </div>
 
 </div>
@@ -153,34 +180,54 @@ lightweight and reliable.
 <section id="gallery" class="gallery">
 <div class="container">
 <h2>Gallery</h2>
-<p class="gallery-description">See Amfre in action</p>
+<p class="gallery-description">See AmfreOS in action</p>
 
 <div class="card-container">
 <div class="card">
 <img src="Assets/1.png" alt="Desktop">
-<div class="card-caption">Desktop</div>
+<div class="card-caption">Desktop Environment</div>
 </div>
 
 <div class="card">
 <img src="Assets/2.gif" alt="Terminal">
-<div class="card-caption">Terminal</div>
+<div class="card-caption">SOC Terminal</div>
 </div>
 
 <div class="card">
 <img src="Assets/3.gif" alt="Installer">
-<div class="card-caption">Installer</div>
+<div class="card-caption">Installer with Auto-Enroll</div>
 </div>
 
 <div class="card">
 <img src="Assets/4.gif" alt="Applications">
-<div class="card-caption">Applications</div>
+<div class="card-caption">Preinstalled Security Apps</div>
 </div>
 
 <div class="card">
 <img src="Assets/5.gif" alt="Settings">
-<div class="card-caption">Settings</div>
+<div class="card-caption">Security & Privacy Settings</div>
 </div>
 </div>
+</div>
+</section>
+
+<!-- SOC FEATURES -->
+<section id="soc" class="soc">
+<div class="container">
+<h2>SOC Features</h2>
+<p class="gallery-description">Integrated security tools for monitoring, IDS, and threat response</p>
+
+<div class="card-container">
+<div class="soc-card">
+<img src="Assets/wazuh.png" alt="Wazuh">
+<h3>Wazuh</h3>
+<p>Endpoint monitoring, log analysis, and auto-enrollment</p>
+</div>
+
+<div class="soc-card">
+<img src="Assets/suricata.png" alt="Suricata">
+<h3>Suricata IDS</h3>
+<p>Network intrusion detection with alerts and reporting</p>
 </div>
 </section>
 
@@ -197,29 +244,39 @@ lightweight and reliable.
 </div>
 
 <div class="doc-content" id="faq">
-<p><strong>Q: What is Amfre?</strong></p>
-<p>Amfre is a Debian-based operating system focused on
-stability, usability and privacy.</p>
+<p><strong>Q: What is AmfreOS?</strong></p>
+<p>AmfreOS is a Debian-based OS with integrated SOC tools for endpoint monitoring, IDS, threat intelligence, and forensic analysis.</p>
 
-<p><strong>Q: Is Amfre beginner friendly?</strong></p>
-<p>Yes. It works out of the box and follows standard
-Debian workflows.</p>
+<p><strong>Q: Who is it for?</strong></p>
+<p>Home labs, schools, clinics, and small offices seeking secure computing environments.</p>
 
-<p><strong>Q: Is Amfre open source?</strong></p>
-<p>Yes. It is built entirely on open-source software.</p>
+<p><strong>Q: Key Security Features?</strong></p>
+<ul>
+<li>Automatic Wazuh agent enrollment</li>
+<li>Network auto-discovery and clustering</li>
+<li>Firewall (UFW) & intrusion prevention (Fail2Ban)</li>
+<li>Malware scanning (ClamAV, rkhunter, chkrootkit)</li>
+<li>Auto-healing and hardening scripts</li>
+</ul>
 
-<h3>Amfre Commands</h3>
+<h3>AmfreOS Commands</h3>
 
 <div class="command-container">
-<code>sudo install-update</code>
-<button onclick="copyCommand('sudo install-update')">Copy</button>
-<img src="Assets/install-update.gif" alt="Install Update GIF" style="width:100px; margin-left:10px;">
+<code>sudo amfreos-deploy</code>
+<button onclick="copyCommand('sudo amfreos-deploy')">Copy</button>
+<img src="Assets/deploy.gif" alt="Deploy GIF" style="width:100px; margin-left:10px;">
 </div>
 
 <div class="command-container">
-<code>amfre-fetch</code>
-<button onclick="copyCommand('amfre-fetch')">Copy</button>
-<img src="Assets/amfre-fetch.gif" alt="Fetch GIF" style="width:100px; margin-left:10px;">
+<code>sudo amfreos-heal</code>
+<button onclick="copyCommand('sudo amfreos-heal')">Copy</button>
+<img src="Assets/heal.gif" alt="Heal GIF" style="width:100px; margin-left:10px;">
+</div>
+
+<div class="command-container">
+<code>sudo amfreos-dashboard</code>
+<button onclick="copyCommand('sudo amfreos-dashboard')">Copy</button>
+<img src="Assets/dashboard.gif" alt="Dashboard GIF" style="width:100px; margin-left:10px;">
 </div>
 
 </div>
@@ -231,14 +288,14 @@ Debian workflows.</p>
 <!-- DOWNLOAD -->
 <section id="download" class="download">
 <div class="container">
-<h2>Download Amfre</h2>
+<h2>Download AmfreOS</h2>
 <p class="download-description">Get the latest version</p>
 
 <div class="download-options">
 <div class="download-card">
 <h3>Latest Release</h3>
 <p class="version">1.0</p>
-<p>Stable release with all core features</p>
+<p>Stable release with full SOC stack and security features</p>
 <a href="https://sourceforge.net/projects/amfreos/" target="_blank" class="btn btn-primary">Download ISO</a>
 </div>
 </div>
@@ -255,15 +312,42 @@ Debian workflows.</p>
 </div>
 </section>
 
+<!-- RELEASE NOTES -->
+<section id="releases" class="releases">
+<div class="container">
+<h2>Release Notes</h2>
+
+<div class="release-note">
+<h3>v1.0 - 2026-03-14</h3>
+<ul>
+<li>Initial stable release</li>
+<li>Integrated SOC stack: Wazuh, Suricata, TheHive, MISP, Velociraptor</li>
+<li>Auto-enrollment, auto-healing, and security hardening included</li>
+<li>Firewall and malware scanning preconfigured</li>
+</ul>
+</div>
+
+<div class="release-note">
+<h3>v0.9 - 2025-12-01</h3>
+<ul>
+<li>Beta release for home labs and clinics</li>
+<li>Basic Wazuh deployment and agent auto-enrollment</li>
+<li>Network discovery and monitoring</li>
+</ul>
+</div>
+
+</div>
+</section>
+
 <!-- FOOTER -->
 <footer class="footer">
 <div class="container">
 <div class="footer-content">
 <div class="footer-logo">
 <img src="Assets/logo.png">
-<span>Amfre</span>
+<span>AmfreOS</span>
 </div>
-<p>&copy; 2026 Amfre — Your Operating System</p>
+<p>&copy; 2026 AmfreOS — Security Operating System</p>
 </div>
 </div>
 </footer>
